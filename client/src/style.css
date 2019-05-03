@@ -1,0 +1,54 @@
+@import url('https://fonts.googleapis.com/css?family=Cardo|Cinzel');
+/* font-family: 'Cinzel', serif;
+font-family: 'Cardo', serif; */
+
+body {
+    background-color: powderblue;
+    font-family: 'Cinzel', serif; 
+    padding: 0pt 5pt;
+    margin: 15pt;
+}
+h1 {
+    font-size: 2em;
+    text-align: center;
+}
+h2 {
+    font-size: 1.5em;
+    text-align: center;
+}
+.weeklyInfo {
+    border: 1px solid black;
+    
+}
+.dailyInfo {
+    border:1px solid black;
+    
+}
+.date {
+    font-size: 1.5em;
+    border: 1px solid black;
+    background-color: rgb(116, 170, 177); 
+    text-align: center;
+    padding: 0pt 10pt 0pt 10pt;
+    
+    /* background-color: rgb(30, 56, 59); */
+}
+.dailyDetails {
+    padding: 10pt;
+    text-shadow: 1px 1px gray;
+}
+.navBar {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-around;
+}
+.vacationForm {
+    padding-top: 20pt;
+    justify-content: center;
+}
+.logoutLink {
+    color: rgb(77, 0, 128);
+    text-decoration: underline;
+    /* padding: 0; */
+    line-height: 100%;
+}
