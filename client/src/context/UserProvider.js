@@ -21,6 +21,7 @@ class UserProvider extends Component {
         }
     }
     signup = credentials => {
+        console.log(credentials)
         userAxios.post("/auth/signup", credentials).then(res => {
             console.log(res)
             const {user, token} = res.data
@@ -28,12 +29,13 @@ class UserProvider extends Component {
             localStorage.setItem("token", token)
             this.setState({user, token, errMsg: ""})
         })
-        .catch(err => this.handleErr(err.response.data.errMsg))
+        console.log(err => this.handleErr(err.response.data.errMsg))
     }    
     login = credentials => {
-        
+            
         console.log(credentials)
         axios.post("/auth/login", credentials).then(res => {
+            console.log(res)
             const {user, token} = res.data
             localStorage.setItem("user", JSON.stringify(user))
             localStorage.setItem("token", token)
@@ -46,11 +48,7 @@ class UserProvider extends Component {
         localStorage.removeItem("user")
         this.setState({user: {}, token: ""})
     }
-    // getProtectedStuff = () => {
-    //     userAxios.get("/api/user/specialsomething").then(res => {
-
-    //     })
-    // }
+  
     handleErr = errMsg => this.setState({errMsg})
     render(){
         return (
