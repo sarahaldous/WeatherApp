@@ -21,7 +21,6 @@ class UserProvider extends Component {
         }
     }
     signup = credentials => {
-        console.log(credentials)
         userAxios.post("/auth/signup", credentials).then(res => {
             console.log(res)
             const {user, token} = res.data
@@ -32,8 +31,6 @@ class UserProvider extends Component {
         console.log(err => this.handleErr(err.response.data.errMsg))
     }    
     login = credentials => {
-            
-        console.log(credentials)
         axios.post("/auth/login", credentials).then(res => {
             console.log(res)
             const {user, token} = res.data

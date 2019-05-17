@@ -118,29 +118,3 @@ class WeatherDisplay extends Component {
 
 export default withUser(withLocation(withCoordinates(WeatherDisplay)))
 
-// temperatureHigh: 65.37
-// temperatureLow: 50.75
-// apparentTemperatureHigh: 61.65
-// apparentTemperatureLow: 47.98
-// cloudCover: 0.87
-// humidity: 0.72
-// icon: "partly-cloudy-day"
-// precipType: "rain"
-// summary: "Mostly cloudy throughout the day."
-// time: 1554274800  <<-- need to convert this to a readable time
-// windSpeed: 3.83
-// "precipProbability": 0.33,
-// daily -> summary and daily -> data -> [0] -> summary
-
-
-    // const convertTime = (props) => {
-        //     const unixTimestamp = this.props.time;
-        //     const date = new Date(unixTimestamp*1000)
-        //     let myDate = this.props.time
-            
-        //     myDate = new Date(this.props.time *1000);
-        //     // write(myDate.toGMTString()+"<br>"+myDate.toLocaleString());
-        //     console.log(this.props.time)
-        //     console.log(date)
-        //     console.log(myDate)
-        //    }
