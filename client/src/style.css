@@ -35,7 +35,7 @@ h2 {
 }
 .dailyDetails {
     padding: 10pt;
-    text-shadow: 1px 1px gray;
+    text-shadow: 1px 1px whitesmoke
 }
 .navBar {
     display: flex;
@@ -46,7 +46,12 @@ h2 {
 .vacationForm {
     padding-top: 20pt;
     justify-content: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
 }
+
 .logoutLink {
     color: rgb(77, 0, 128);
     text-decoration: underline;
@@ -63,12 +68,43 @@ h2 {
     display: flex;
     justify-content: center;
     align-items: center;
+   
     padding: 10%;
 }
 .planTrip {
     width: 100px;
     font-family: 'Cardo', serif;
-    background-color: rgba(255, 68, 0, 0.459);
+    font-size: 1em;
+    /* background-color: rgba(255, 68, 0, 0.342); */
+    background-color: rgb(116, 170, 177); 
     padding: 5px;
     
 }
+.saveLocationDiv {
+    display: flex; 
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.input {
+    margin: 5px;
+    font-family: 'Cardo', serif;
+    font-size: 1em;
+}
+.submitButton {
+    width: 100px;
+    font-family: 'Cardo', serif;
+    background-color: rgba(255, 68, 0, 0.459);
+    padding: 5px;
+    margin-top: 30px;
+}
+.saveLocation {
+    margin: 5px;
+    font-family: 'Cardo', serif;
+    font-size: 1em;
+    justify-content: center;
+    width: 150px;
+    background-color: rgb(116, 170, 177); 
+
+} 

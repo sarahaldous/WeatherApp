@@ -73,9 +73,6 @@ class WeatherDisplay extends Component {
                     <div key={i}>
                    
                     <div className="weeklyInfo">
-                    
-                        
-                        {/* Put weekly weather summary here */}
                        </div>
                        <div className="dailyInfo" >
                            <div className="date">
@@ -92,7 +89,6 @@ class WeatherDisplay extends Component {
                           <p>Cloud Cover: {parseFloat(convertPercentage(dayWeather.cloudCover)).toFixed()}%</p>
                           <p>Chance of Precipitation: {parseFloat(convertPercentage(dayWeather.precipProbability)).toFixed()}%</p> 
                           <p>Wind Speed: {parseFloat(dayWeather.windSpeed).toFixed()} MPH</p>
-                           {/* alerts */}
                           </div>
                          
                      </div> 
@@ -105,7 +101,9 @@ class WeatherDisplay extends Component {
         <div>
             <VacationForm />
             <h1>{this.props.currentCity && "This week in " + this.props.currentCity[0].toUpperCase() + this.props.currentCity.slice(1) + ", " + this.props.currentState[0].toUpperCase() + this.props.currentState.slice(1)}</h1>
-            <button onClick={this.saveLocation}>Save Location</button>
+            <div className="saveLocationDiv">
+                <button className="saveLocation" onClick={this.saveLocation}>Save Location</button>
+            </div>
             <h2>{this.props.dailySummary}</h2>
             {/* <div>{this.props.weeklyIcon}</div> */}
             <h2>{this.props.summary}</h2>

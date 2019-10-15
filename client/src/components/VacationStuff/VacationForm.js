@@ -13,12 +13,14 @@ const VacationForm = (props) => {
     
         <form className="vacationForm" onSubmit={props.handleSubmit}>
             <input  type="text"
+                    className="input"
                     name="city"
                     placeholder="City"
                     value={props.city}
                     onChange={props.handleChange}
                     onFocus={props.handleFocus}/>
             <input  type="text"
+                    className="input"
                     name="state"
                     placeholder="State or Country"
                     value={props.state}
@@ -27,7 +29,7 @@ const VacationForm = (props) => {
                         name="dates"
                         value={props.dates}
                         /> */}
-                <button>Submit</button>
+                <button className="submitButton">Submit</button>
                 
 
        </form>
