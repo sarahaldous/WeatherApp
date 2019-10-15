@@ -53,3 +53,22 @@ h2 {
     /* padding: 0; */
     line-height: 100%;
 }
+.homeMain {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+} 
+.welcomeText {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10%;
+}
+.planTrip {
+    width: 100px;
+    font-family: 'Cardo', serif;
+    background-color: rgba(255, 68, 0, 0.459);
+    padding: 5px;
+    
+}
