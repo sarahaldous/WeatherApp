@@ -39,17 +39,18 @@ class CoordinatesProvider extends Component {
 
         axios.get(`https://api.opencagedata.com/geocode/v1/json?q=${this.state.city}%2C%20${this.state.state}&key=${coordinates}&language=en&pretty=1`).then((response) => {
             this.setState({ latitude: response.data.results[0].geometry.lat, longitude:  response.data.results[0].geometry.lng}, () => this.getWeather())
+            this.setState ({ city: ""})
+            this.setState ({ state: ""})
         }).catch(function(error){
             console.log(error)
         })
     }
     getWeather = (props) => {
         axios.get(`https://vschool-cors.herokuapp.com?url=https://api.darksky.net/forecast/${weather}/${this.state.latitude},${this.state.longitude}`).then((response) => {
-            // console.log(response.data)
             this.setState({ forecast: response.data.daily.data}, () => console.log(this.state.forecast))
             this.setState({ dailySummary: response.data.daily.summary}, () => console.log(this.state.dailySummary))
             this.setState({ weeklyIcon: response.data.daily.icon}, () => console.log(this.state.weeklyIcon))
-            // this.setState({ dailyIcon: response.data.daily.icon}, () => console.log(this.state.))
+           
             console.log(response.data.daily.data[0].time)
         }).catch(function(error){
             console.log(error)
@@ -57,7 +58,8 @@ class CoordinatesProvider extends Component {
     }
     handleChange = (e) => {
         this.setState ({
-            [e.target.name]: e.target.value
+            [e.target.name]: e.target.value, 
+            
         })
     }
     handleFocus = (e) => {

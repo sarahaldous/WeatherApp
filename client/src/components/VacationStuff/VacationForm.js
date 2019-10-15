@@ -6,11 +6,7 @@ import { PromiseProvider } from 'mongoose';
 
 
 const VacationForm = (props) => {
-   
-
-   
     return (
-    
         <form className="vacationForm" onSubmit={props.handleSubmit}>
             <input  type="text"
                     className="input"
@@ -18,8 +14,7 @@ const VacationForm = (props) => {
                     placeholder="City"
                     value={props.city}
                     onChange={props.handleChange}
-                    onFocus={props.handleFocus}
-                    onChange={props.handleChange} 
+                    onFocus={props.handleFocus} 
                     onSubmit={props.handleSubmit}/>
             <input  type="text"
                     className="input"
@@ -27,7 +22,6 @@ const VacationForm = (props) => {
                     placeholder="State or Country"
                     value={props.state}
                     onChange={props.handleChange}
-                    onChange={props.handleChange} 
                     onSubmit={props.handleSubmit}/>
             {/* <input  type="calendar"
                         name="dates"
