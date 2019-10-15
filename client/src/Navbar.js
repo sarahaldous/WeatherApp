@@ -6,7 +6,7 @@ import {withUser} from '././context/UserProvider.js'
 class NavBar extends Component {
     render(){
 
-        const welcomeMessage = `Welcome, ${this.props.name}`
+        // const welcomeMessage = `Welcome, ${this.props.name}`
         return (
             <nav className="navBar">
                 <Link to="/home">Home</Link>

@@ -16,6 +16,17 @@ h2 {
     font-size: 1.5em;
     text-align: center;
 }
+h4 {
+    font-family: 'Cardo', serif;
+}
+.loginButton {
+    margin: 5px;
+    font-family: 'Cardo', serif;
+    font-size: 1em;
+    justify-content: center;
+    width: 150px;
+    background-color: rgb(116, 170, 177); 
+}
 .weeklyInfo {
     border: 1px solid black;
     
@@ -41,7 +52,7 @@ h2 {
     display: flex;
     align-items: flex-start;
     justify-content: space-around;
-    padding-bottom: 5%;
+    padding-bottom: 0;
 }
 .vacationForm {
     padding-top: 20pt;
@@ -63,13 +74,15 @@ h2 {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    /* max-width: 600px; */
 } 
 .welcomeText {
     display: flex;
     justify-content: center;
     align-items: center;
-   
-    padding: 10%;
+    margin: 0;
+    padding: 5%;
+    padding-bottom: 2%;
 }
 .planTrip {
     width: 100px;
@@ -78,6 +91,7 @@ h2 {
     /* background-color: rgba(255, 68, 0, 0.342); */
     background-color: rgb(116, 170, 177); 
     padding: 5px;
+    margin-top: 2%;
     
 }
 .saveLocationDiv {
@@ -95,7 +109,7 @@ h2 {
 .submitButton {
     width: 100px;
     font-family: 'Cardo', serif;
-    background-color: rgba(255, 68, 0, 0.459);
+    background-color: rgb(116, 170, 177); 
     padding: 5px;
     margin-top: 30px;
 }
@@ -108,3 +122,21 @@ h2 {
     background-color: rgb(116, 170, 177); 
 
 } 
+.notAMember {
+    text-decoration: underline;
+}
+.authForm {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.authForm > p {
+    text-decoration: underline;
+}
+.authForm > p:hover {
+    cursor: pointer;
+}
+.appDescription {
+    max-width: 600px;
+}

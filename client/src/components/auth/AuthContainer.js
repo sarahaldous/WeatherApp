@@ -40,7 +40,7 @@ constructor(){
     }
     render(){
         return (
-            <div>
+            <div className="authForm">
                 {this.state.authToggle ? 
                 <>
                 <h3>Sign Up</h3>
@@ -58,14 +58,16 @@ constructor(){
                     <>
                         <h3>Login</h3>
                         <AuthForm 
+                            className="loginButton"
                             handleChange={this.handleChange}
                             handleSubmit={this.handleLogin}
                             username={this.state.username}
                             password={this.state.password}
                             btnText="Log In"
+                            
                         />
                         <p style={{color: 'crimson'}}>{this.props.errMsg}</p>
-                        <p onClick={this.toggler}>Not a member?</p>
+                        <p className="notAMember" onClick={this.toggler}>Not a member?</p>
                     </>
                 }
             </div>
