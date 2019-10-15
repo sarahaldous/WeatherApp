@@ -18,6 +18,9 @@ export const useFormProperties = (initInputs, submitCallback) => {
         e.preventDefault()
         submitCallback(inputs)
         setInputs(initInputs)
+        this.setState({
+            inputValue: ""
+        })
     }
     return {handleChange, handleSubmit, inputs}
 }

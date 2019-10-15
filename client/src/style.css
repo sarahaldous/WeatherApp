@@ -15,6 +15,7 @@ h1 {
 h2 {
     font-size: 1.5em;
     text-align: center;
+    margin-top: 5%;
 }
 h4 {
     font-family: 'Cardo', serif;
@@ -76,6 +77,7 @@ h4 {
     align-items: center;
     /* max-width: 600px; */
 } 
+
 .welcomeText {
     display: flex;
     justify-content: center;
@@ -139,4 +141,10 @@ h4 {
 }
 .appDescription {
     max-width: 600px;
+}
+.savedLocations {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }

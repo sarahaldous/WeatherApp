@@ -15,16 +15,21 @@ class SavedLocations extends Component {
         console.log(location)
         return (
             <div>
-            <p>{location.city},  {location.state}</p>
-           
-            <button onClick={() => this.props.handleDelete(location._id)}>Delete</button>
-            
+               
+            <div >
+                
+                <div className="savedLocations">
+                    <p>{location.city},  {location.state}</p>
+                    <button className="saveLocation" onClick={() => this.props.handleDelete(location._id)}>Delete</button>
+                </div>
+            </div>
             </div>
         )
         })
         console.log(this.props)
     return (
         <div>
+            <h2>Saved Locations</h2>
             {mappedSavedLocations}
         </div>
     )
