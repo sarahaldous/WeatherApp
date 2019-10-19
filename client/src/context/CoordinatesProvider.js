@@ -47,11 +47,10 @@ class CoordinatesProvider extends Component {
     }
     getWeather = (props) => {
         axios.get(`https://vschool-cors.herokuapp.com?url=https://api.darksky.net/forecast/${weather}/${this.state.latitude},${this.state.longitude}`).then((response) => {
-            this.setState({ forecast: response.data.daily.data}, () => console.log(this.state.forecast))
-            this.setState({ dailySummary: response.data.daily.summary}, () => console.log(this.state.dailySummary))
-            this.setState({ weeklyIcon: response.data.daily.icon}, () => console.log(this.state.weeklyIcon))
+            this.setState({ forecast: response.data.daily.data})
+            this.setState({ dailySummary: response.data.daily.summary})
+            this.setState({ weeklyIcon: response.data.daily.icon})
            
-            console.log(response.data.daily.data[0].time)
         }).catch(function(error){
             console.log(error)
         })
