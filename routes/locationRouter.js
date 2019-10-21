@@ -1,9 +1,9 @@
 const express = require('express')
-// const Weather = require('../models/user.js')
 const weatherRouter = express.Router()
 const Locations = require('../models/Locations.js')
 const locationRouter = express.Router()
 
+// Return the user's saved locations
 locationRouter.get('/', (req, res, next) => {
     Locations.find({user: req.user._id}, (err, locations) => {
         if(err){

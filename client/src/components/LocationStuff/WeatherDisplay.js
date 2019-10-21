@@ -2,7 +2,7 @@ import React, {Component} from 'react'
 import {withCoordinates} from '../../context/CoordinatesProvider.js'
 import {withLocation} from '../../context/LocationProvider.js'
 import {withUser} from '../../context/UserProvider.js'
-import VacationForm from './VacationForm.js'
+import LocationForm from './LocationForm.js'
 import moment from 'moment'
 
 
@@ -99,7 +99,7 @@ class WeatherDisplay extends Component {
             
       return (
         <div>
-            <VacationForm />
+            <LocationForm />
             <h1>{this.props.currentCity && "This week in " + this.props.currentCity[0].toUpperCase() + this.props.currentCity.slice(1) + ", " + this.props.currentState[0].toUpperCase() + this.props.currentState.slice(1)}</h1>
             <div className="saveLocationDiv">
                 <button className="saveLocation" onClick={this.saveLocation}>Save Location</button>

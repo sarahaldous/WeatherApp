@@ -5,9 +5,9 @@ import {withCoordinates} from '../../context/CoordinatesProvider.js'
 import { PromiseProvider } from 'mongoose';
 
 
-const VacationForm = (props) => {
+const LocationForm = (props) => {
     return (
-        <form className="vacationForm" onSubmit={props.handleSubmit}>
+        <form className="locationForm" onSubmit={props.handleSubmit}>
             <input  type="text"
                     className="input"
                     name="city"
@@ -23,14 +23,10 @@ const VacationForm = (props) => {
                     value={props.state}
                     onChange={props.handleChange}
                     onSubmit={props.handleSubmit}/>
-            {/* <input  type="calendar"
-                        name="dates"
-                        value={props.dates}
-                        /> */}
                 <button className="submitButton">Submit</button>
                 
 
        </form>
     )
 }
-export default withCoordinates(VacationForm)
+export default withCoordinates(LocationForm)

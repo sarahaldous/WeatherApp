@@ -5,10 +5,10 @@ import AuthContainer from './components/auth/AuthContainer.js'
 import ProtectedRoute from './shared/ProtectedRoutes.js'
 import Home from './components/Home.js'
 import NotFound from './components/NotFound.js'
-import WeatherDisplay from './components/VacationStuff/WeatherDisplay.js'
-import VacationForm from './components/VacationStuff/VacationForm'
+import WeatherDisplay from './components/LocationStuff/WeatherDisplay.js'
+import LocationForm from './components/LocationStuff/LocationForm'
 import LocationProvider from './context/LocationProvider.js'
-import SavedLocations from './components/VacationStuff/SavedLocations.js'
+import SavedLocations from './components/LocationStuff/SavedLocations.js'
 import NavBar from './Navbar.js'
 
 const App = (props) => {
@@ -45,9 +45,9 @@ const App = (props) => {
                     />  
                 <ProtectedRoute
                     token={token}
-                    path="/vacation"
+                    path="/location"
                     redirectTo="/login"
-                    component={VacationForm}
+                    component={LocationForm}
                     username={user.username}
                     logout={logout}
                     />
