@@ -12,7 +12,6 @@ class SavedLocations extends Component {
 
     
     let mappedSavedLocations = this.props.mySavedLocations.map((location, i) => {
-        console.log(location)
         return (
             <div>
                
@@ -26,7 +25,6 @@ class SavedLocations extends Component {
             </div>
         )
         })
-        console.log(this.props)
     return (
         <div>
             <h2>Saved Locations</h2>

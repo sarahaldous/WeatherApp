@@ -5,8 +5,6 @@ import {withUser} from '../../context/UserProvider.js'
 import LocationForm from './LocationForm.js'
 import moment from 'moment'
 
-
-
 class WeatherDisplay extends Component {
    constructor(){
         super()
@@ -17,9 +15,8 @@ class WeatherDisplay extends Component {
         this.props.getCoordinatesData()
     }
   
-   saveLocation = () => {
+    saveLocation = () => {
        this.props.setNewLocation(this.props.city, this.props.state, this.props.user._id)
-    console.log(this.props)
     }
     render(){
   
@@ -27,15 +24,9 @@ class WeatherDisplay extends Component {
            return `${percentage*100}%`
        }
             let mappedDay = this.props.forecast.map((dayWeather, i) => {
-                const convertTime = (unixTime) => {
-                    const date = new Date(unixTime*1000)
-                   
-                } 
-                convertTime()
                 let weatherImage = ""
 
-                
-               switch(dayWeather.icon){
+                switch(dayWeather.icon){
                    case 'rain': 
                    weatherImage="https://images.unsplash.com/photo-1525087740718-9e0f2c58c7ef?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=700&q=60"
                    break;
@@ -46,7 +37,7 @@ class WeatherDisplay extends Component {
                    weatherImage="https://images.unsplash.com/photo-1444384851176-6e23071c6127?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=700&q=60"
                    break;
                    case 'clear-day': 
-                   weatherImage="https://images.unsplash.com/photo-1429318733208-8ea7c5671090?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80"
+                   weatherImage="https://images.unsplash.com/photo-1429318733208-8ea7c5671090?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=700&q=60"
                    break;
                    case 'wind': 
                    weatherImage="https://images.unsplash.com/photo-1506888861922-6311fd190754?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=700&q=60"
@@ -64,37 +55,31 @@ class WeatherDisplay extends Component {
                    weatherImage="https://images.unsplash.com/photo-1501071431528-9a5b594a79a3?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=700&q=60"
                    break;
 
-                  
                    default:
                    weatherImage = ""
-               }
+                }
 
                 return (
                     <div key={i}>
                    
-                    <div className="weeklyInfo">
-                       </div>
+                    <div className="weeklyInfo"></div>
                        <div className="dailyInfo" >
-                           <div className="date">
-                          <p>{moment(dayWeather.time * 1000).format("dddd, MMM DD, YYYY")}</p>
-                          </div>
-                          <div className="dailyDetails" style={{backgroundImage: `url(${weatherImage})`, backgroundPosition: "center", backgroundSize: "cover"}}>
-                          <p>Summary: {dayWeather.summary}</p>
-                         
-                          
-                          <p>High: {parseFloat(dayWeather.temperatureHigh).toFixed()}°F</p>
-                          <p>Low: {parseFloat(dayWeather.temperatureLow).toFixed()}°F</p>
-                          <p>Feels Like: {parseFloat(dayWeather.apparentTemperatureLow).toFixed()}°F to {parseFloat(dayWeather.apparentTemperatureHigh).toFixed()}°F</p>
-                          <p>Humidity: {parseFloat(convertPercentage(dayWeather.humidity)).toFixed()}%</p>
-                          <p>Cloud Cover: {parseFloat(convertPercentage(dayWeather.cloudCover)).toFixed()}%</p>
-                          <p>Chance of Precipitation: {parseFloat(convertPercentage(dayWeather.precipProbability)).toFixed()}%</p> 
-                          <p>Wind Speed: {parseFloat(dayWeather.windSpeed).toFixed()} MPH</p>
-                          </div>
-                         
-                     </div> 
-                     </div>
+                            <div className="date">
+                                <p>{moment(dayWeather.time * 1000).format("dddd, MMM DD, YYYY")}</p>
+                            </div>
+                            <div className="dailyDetails" style={{backgroundImage: `url(${weatherImage})`, backgroundPosition: "center", backgroundSize: "cover"}}>
+                                <p>Summary: {dayWeather.summary}</p>
+                                <p>High: {parseFloat(dayWeather.temperatureHigh).toFixed()}°F</p>
+                                <p>Low: {parseFloat(dayWeather.temperatureLow).toFixed()}°F</p>
+                                <p>Feels Like: {parseFloat(dayWeather.apparentTemperatureLow).toFixed()}°F to {parseFloat(dayWeather.apparentTemperatureHigh).toFixed()}°F</p>
+                                <p>Humidity: {parseFloat(convertPercentage(dayWeather.humidity)).toFixed()}%</p>
+                                <p>Cloud Cover: {parseFloat(convertPercentage(dayWeather.cloudCover)).toFixed()}%</p>
+                                <p>Chance of Precipitation: {parseFloat(convertPercentage(dayWeather.precipProbability)).toFixed()}%</p> 
+                                <p>Wind Speed: {parseFloat(dayWeather.windSpeed).toFixed()} MPH</p>
+                            </div>
+                        </div> 
+                    </div>
                 )
- 
             })
             
       return (
@@ -105,7 +90,6 @@ class WeatherDisplay extends Component {
                 <button className="saveLocation" onClick={this.saveLocation}>Save Location</button>
             </div>
             <h2>{this.props.dailySummary}</h2>
-            {/* <div>{this.props.weeklyIcon}</div> */}
             <h2>{this.props.summary}</h2>
             {mappedDay}
         </div>

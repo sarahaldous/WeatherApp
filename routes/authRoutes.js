@@ -16,7 +16,6 @@ authRouter.post("/signup", (req, res, next) => {
         const newUser = new User(req.body)
         newUser.save((err, savedUser) => {
             if(err) {
-                console.log(err)
                 res.status(500)
                 return next(new Error ("Username and Password are Required."))
             }

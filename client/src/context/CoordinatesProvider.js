@@ -42,7 +42,6 @@ class CoordinatesProvider extends Component {
             this.setState ({ city: ""})
             this.setState ({ state: ""})
         }).catch(function(error){
-            console.log(error)
         })
     }
     getWeather = (props) => {
@@ -52,7 +51,6 @@ class CoordinatesProvider extends Component {
             this.setState({ weeklyIcon: response.data.daily.icon})
            
         }).catch(function(error){
-            console.log(error)
         })
     }
     handleChange = (e) => {

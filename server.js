@@ -28,7 +28,6 @@ app.use("/api/locations", require('./routes/locationRouter.js'))
 
 //Global Error Handler
 app.use((err, req, res, next) => {
-    console.log(err)
     if(err.name === "UnauthorizedError"){
         res.status(err.status)
     }

@@ -28,7 +28,6 @@ locationRouter.post('/', (req, res, next) => {
 
 //Delete a user's saved location
 locationRouter.delete("/:_id", (req, res, next) => {
-    console.log(req.params._id)
    Locations.findOneAndRemove({_id : req.params._id}, (err, deletedLocation) => {
        if(err) {
            res.status(500)

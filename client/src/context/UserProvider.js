@@ -22,7 +22,6 @@ class UserProvider extends Component {
     }
     signup = credentials => {
         userAxios.post("/auth/signup", credentials).then(res => {
-            console.log(res)
             const {user, token} = res.data
             localStorage.setItem("user", JSON.stringify(user))
             localStorage.setItem("token", token)
@@ -32,7 +31,6 @@ class UserProvider extends Component {
     }    
     login = credentials => {
         axios.post("/auth/login", credentials).then(res => {
-            console.log(res)
             const {user, token} = res.data
             localStorage.setItem("user", JSON.stringify(user))
             localStorage.setItem("token", token)

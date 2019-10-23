@@ -12,7 +12,7 @@ const Home = (props) => {
                 <h4>Once weather from a certain location has been requested, a switch statement determines which picture should display behind each day's weather data. This way, users can see at a glance what kind of weather will predominate that week.</h4>
             </div>
             
-            <button className="planTrip" onClick={()=> props.history.push('/location')}>Check the Forecast!</button>
+            <button className="checkWeather" onClick={()=> props.history.push('/location')}>Check the Forecast!</button>
         </div>
     )
 }

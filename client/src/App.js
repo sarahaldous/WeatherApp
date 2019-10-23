@@ -7,7 +7,6 @@ import Home from './components/Home.js'
 import NotFound from './components/NotFound.js'
 import WeatherDisplay from './components/LocationStuff/WeatherDisplay.js'
 import LocationForm from './components/LocationStuff/LocationForm'
-import LocationProvider from './context/LocationProvider.js'
 import SavedLocations from './components/LocationStuff/SavedLocations.js'
 import NavBar from './Navbar.js'
 
